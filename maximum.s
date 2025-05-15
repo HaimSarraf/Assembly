@@ -16,7 +16,7 @@
 .section .data
 
 data_items:
-    .long 3,45,12,67,0,4,107,52,0    # 0 is the signal to finish the program. if it been detected the program the rest of the list will be ignored!
+    .long 3,45,12,67,0,4,107,52,0    # 0 is the signal to finish the program. if it's been detected the items in the rest of the list will be ignored!
                                      # move the 0 from middle the list and the result will change from 67 to 107
 .section .text
 
