@@ -34,8 +34,8 @@ loop_start:
     je   loop_exit
     incl %edi                       # load the next value
     movl data_items(,%edi,4), %eax
-    cmpl %ebx , %eax                # compare values
-    jle  loop_start                 # jump to loop beginning if the new one isn't the bigger
+    cmpl %eax , %ebx                # compare values
+    jge  loop_start                 # jump to loop beginning if ebx is greater than or equal to eax
     movl %eax, %ebx                 # move the value as the largest
     jmp  loop_start                 # jump to loop beginning
 
